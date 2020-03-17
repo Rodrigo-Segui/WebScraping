@@ -1,4 +1,5 @@
 """
+************PRIMEIRA FORMA ***************
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
@@ -28,6 +29,7 @@ if req.status_code == 200:
                     f.write(response.content)
     """
 
+
 import time
 import requests
 import pandas as pd
@@ -43,14 +45,14 @@ url = "https://sites.unipampa.edu.br/praec/restaurantes-universitarios/cardapios
 driver.get(url)
 time.sleep(10)
 
-element = driver.find_element_by_xpath("//div[@class='entry-content']//table//tbody//tr//td//a[@href='https://sites.unipampa.edu.br/praec/files/2020/03/cardapio-marcolista-de-ingredientes.pdf']")
+#element = driver.find_element_by_xpath("//div[@class='entry-content']//table//tbody//tr//td//a[@href='https://sites.unipampa.edu.br/praec/files/2020/03/cardapio-marcolista-de-ingredientes.pdf']")
+element = driver.find_element_by_xpath("//div[@class='entry-content']")
 html_content = element.get_attribute('outerHTML')
 soup = BeautifulSoup(html_content, 'html.parser')
-link_full = soup.find(name='a')
-link = link_full.get('href')
-print(link)
-#df_full = pd.read_html(str(table))[0]
-#print(df_full)
+link_full = soup.find_all(name='a')
+
+print(link_full)
+
 
 
 
