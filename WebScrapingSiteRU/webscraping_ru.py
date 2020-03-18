@@ -46,12 +46,17 @@ driver.get(url)
 time.sleep(10)
 
 #element = driver.find_element_by_xpath("//div[@class='entry-content']//table//tbody//tr//td//a[@href='https://sites.unipampa.edu.br/praec/files/2020/03/cardapio-marcolista-de-ingredientes.pdf']")
-element = driver.find_element_by_xpath("//div[@class='entry-content']")
+element = driver.find_element_by_xpath("//div[@class='entry-content']//table")
 html_content = element.get_attribute('outerHTML')
 soup = BeautifulSoup(html_content, 'html.parser')
-link_full = soup.find_all(name='a')
+table = soup.find_all(name='table')
 
-print(link_full)
+df_full = pd.read_html(str(table))[0]
+
+
+
+print(df_full)
+
 
 
 
