@@ -7,13 +7,13 @@ Projetos realizados durante estudos de web scraping
 
 
 <p align="center">
-  <a href="#webscraping-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#💻-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#começando">Começando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#qual-licença">Licença</a>
+  <a href="#memo-licença">Licença</a>
 </p>
 
-## :webscraping: Tecnologias
+## :rocket: Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
@@ -25,32 +25,42 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O WebScraping é um repositoŕio  de projetos desenvolvidos durante o estudo de tecnicas de web scraping.
+O WebScraping é um repositoŕio de projetos desenvolvidos durante o estudo de tecnicas de web scraping. 
+Projetos desenvolvidos:
+
+- WebScrapingSiteNBA: foi desenvolvido com base no video de webscraping do canal código fonte no youtube, onde foi realizado a raspagem de uma tabela de dados do site nba.com
+
+- WebScrapingSiteRU: consisti na raspagem de dados dos cardápios do restaurante universitário da Unipampa - Bagé
 
 
 ## Começando
 
- 1. 
- 2. 
- 3. 
+ 1. Clone esse repositorio ```git clone https://github.com/olucasokarin/be-the-hero.git```
+ 2. Instale as seguintes tecnologias (linux): 
+      ```bash
+      $ pip install python
+      $ pip install pandas
+      $ sudo apt-get install chromium-chromedriver
+      $ pip install lxml
+      $ pip install selenium
+      $ pip install requests2
+      $ pip install beautifulsoup4
+      ```
  
 ### Começar o WebScraping_NBA
  
- 1. Mova para o directorio do frontend: ```cd frontend```
- 2. Run ```npm start```
+ 1. Entre no diretorio WebScraping/WebScrapingSiteNBA
+ 2. python webscraping_nba.py
  
 ### Começar o WebScraping_RU
  
 
- 1.
- 2. 
- 3.
- 4. 
- 5. 
+ 1. Entre no diretorio WebScraping/WebScrapingSiteRU
+ 2. python webscraping_ru.py
  
  
  
  
- ## :qual: Licença
+ ## :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
