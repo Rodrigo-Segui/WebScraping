@@ -5,7 +5,15 @@ from bs4 import BeautifulSoup
 import json
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-import chromedriver_binary  # Adds chromedriver binary to path
+#import chromedriver_binary  # Adds chromedriver binary to path
+
+import os
+
+
+
+
+
+
 
 #1 Pegar conteudo HTML a partir da URL
 url = "https://stats.nba.com/players/traditional/?PerMode=Totals&Season=2019-20&SeasonType=Regular%20Season&sort=PLAYER_NAME&dir=-1"
@@ -47,8 +55,15 @@ def buildrank(type):
 
 option = Options()
 option.headless = True
-driver = webdriver.Chrome()
+driver = webdriver.Chrome('/usr/bin/chromedriver')
 driver.get(url)
+
+#chromedriver = "/usr/bin/chromedriver"
+#os.environ["webdriver.chrome.driver"] = chromedriver
+#driver = webdriver.Chrome(chromedriver)
+
+
+
 driver.implicitly_wait(10) #in seconds
 
 for k in rankings:
